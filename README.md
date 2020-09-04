@@ -1,20 +1,14 @@
-### Date created
-Include the date you created this project and README file.
+### Projects
 
-### Project Title
-Replace the Project Title
+This repo contains notebooks with two projects completed for the Udacity course "Programming for Data Science with R". 
 
 ### Description
-Describe what your project is about and what it does
 
-### Files used
-Include the files used
+#### "Explore BikeShare Data"
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+I came up with and answered three questions about three pre-cleaning data frames from the BikeShare database in R. Each answer includes at least one visualization (using the ggplot2 library) and a summary. 
 
+#### "Investigate a Relational Database: The Sakila Movie Database"
 
-<<<<<<< HEAD
+I picked and answered four questions for investigating this database using SQL queries. Visualizations were made using Google Sheets and presented in pdf. 
 
-=======
->>>>>>> e22d7ece4523f38a2a5ea0ba351351e0ef1d3616
