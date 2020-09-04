@@ -15,7 +15,7 @@ head(wash)
 head(chi)
 
 # looking at Trip Duration by User Type 
-by(chi$Trip.Duration, chi$User.Type, mean)
+by(chi$Trip.Duration/60, chi$User.Type, mean)
 
 by(ny$Trip.Duration/60, ny$User.Type, mean)
 
