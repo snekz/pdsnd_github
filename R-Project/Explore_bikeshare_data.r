@@ -8,6 +8,7 @@ ny = read.csv('new_york_city.csv', na = c("", "N/A", "NA", " "))
 wash = read.csv('washington.csv', na = c("", "N/A", "NA", " "))
 chi = read.csv('chicago.csv', na = c("", "N/A", "NA", " "))
 
+<<<<<<< HEAD
 head(ny)
 
 head(wash)
@@ -21,20 +22,9 @@ by(ny$Trip.Duration/60, ny$User.Type, mean)
 
 by(wash$Trip.Duration/60, wash$User.Type, mean)
 
+=======
+>>>>>>> refactoring
 ny_chi=rbind(ny,chi) # Combine data from two cities
-
-# Explore the data 
-
-print("User Age Info")
-summary(2020-ny$Birth.Year) # New York
-summary(2020-chi$Birth.Year) # Chicago
-summary(2020-ny_chi$Birth.Year) # Combined
-
-
-# Info on user's main trip duration
-# A noticable outlier can be seen in "Max"
-print("Trip Duration")
-summary(ny_chi$Trip.Duration)
 
 # Duration in seconds split by 60 to get minutes
 # 2020 - Age to get current age (could be aother year, but I chose to go with 2020)
@@ -91,12 +81,6 @@ comb$Month <- month.name[as.numeric(substring(comb$Start.Time, 6,7))]
 
 # Remove NA entries from User Type
 comb = subset(comb, !is.na(User.Type))
-# Checking data for User Types
-summary(comb$User.Type)
-
-# Taking a look at total trip durations during different months
-# We notice missing data for many months. 
-by(comb$Trip.Duration/60, comb$Month, sum)
 
 # to order the x-axis cronologically by month
 comb$Month <- factor(comb$Month, levels=month.name)
@@ -114,4 +98,3 @@ facet_wrap(~ User.Type) +
 labs(x = 'Month', y = 'Trip Durations') +
 ggtitle("Durations of Trips Taken by Customers and Subscribers for Each Month")
 
-system('python -m nbconvert Explore_bikeshare_data.ipynb')
