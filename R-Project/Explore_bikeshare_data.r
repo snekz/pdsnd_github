@@ -8,7 +8,6 @@ ny = read.csv('new_york_city.csv', na = c("", "N/A", "NA", " "))
 wash = read.csv('washington.csv', na = c("", "N/A", "NA", " "))
 chi = read.csv('chicago.csv', na = c("", "N/A", "NA", " "))
 
-<<<<<<< HEAD
 head(ny)
 
 head(wash)
@@ -22,8 +21,7 @@ by(ny$Trip.Duration/60, ny$User.Type, mean)
 
 by(wash$Trip.Duration/60, wash$User.Type, mean)
 
-=======
->>>>>>> refactoring
+
 ny_chi=rbind(ny,chi) # Combine data from two cities
 
 # Duration in seconds split by 60 to get minutes
